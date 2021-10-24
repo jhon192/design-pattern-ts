@@ -6,7 +6,7 @@ export class Factory implements Ioperador{
         this.name = name
     }
 
-    doSomething(): any {
+    doRecognize(): string {
         return `I am a ${this.name}`
     }
 }

@@ -1,3 +1,3 @@
 export interface Ioperador{
-    doSomething(): any
+    doRecognize(): any
 }
