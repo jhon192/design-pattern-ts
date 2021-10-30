@@ -1,3 +1,3 @@
 # Factory 
 ## Design Pattern 
-### Type Creational
+### Type Creational <small>(not completed yet)</small>
