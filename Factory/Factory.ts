@@ -1,12 +1,19 @@
-import { Ioperador } from "./Ioperator";
+import { CheesePizza } from "./CheesePizza";
+import { PepperoniPizza } from "./PepperoniPizza ";
+import { Pizza } from "./Pizza";
+import { VeggiePizza } from "./VeggiePizza ";
 
-export class Factory implements Ioperador{
-    private name: string
-    constructor(name: string) {
-        this.name = name
+export class PizzaFactory {
+    public createPizza(type: string): Pizza | null {
+      if (type === 'cheese') {
+        return new CheesePizza();
+      } else if (type === 'pepperoni') {
+        return new PepperoniPizza();
+      } else if (type === 'veggie') {
+        return new VeggiePizza();
+      } else {
+        console.log('Pizza type not found');
+        return null;
+      }
     }
-
-    doRecognize(): string {
-        return `I am a ${this.name}`
-    }
-}
+  }
